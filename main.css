@@ -1,6 +1,6 @@
 :root{
     --primary-color:  #2B6FF3;
-    --background: #E5E5E5;
+    --background: rgb(243, 245, 248);
     --white: #fff;
 }
 
@@ -94,3 +94,17 @@ body{
 .span{
     display: inline;
 }
+
+.symptoms{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 4px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 20px 27px;
+    margin: 10px 0px;
+}
+
+.symptoms span{
+        display: inline-block;
+        padding: 10px 30px 10px 0px;
+}
+

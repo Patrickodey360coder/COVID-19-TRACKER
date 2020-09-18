@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bc40424979.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Covid Tracker</title>
@@ -35,24 +36,32 @@
                 <div class="col-md-3">
                     <div class="box bx-1">
                         <p class="font-weight-bold">Total Cases</p>
+                        <h1 class="text-primary" id="totalCases">loading</h1>
+                        <p id="newConfirmed"></p>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="box bx-2">
                         <p class="font-weight-bold">Active Cases</p>
+                        <h1 class="text-warning" id="activeCases">loading</h1>
+                        <p id="newCases"></p>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="box bx-3">
                         <p class="font-weight-bold">Recovered</p>
+                        <h1 class="text-success" id="totalRecovered">loading</h1>
+                        <p id="newRecovered"></p>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="box bx-4">
                         <p class="font-weight-bold">Total Deaths</p>
+                        <h1 class="text-danger" id="totalDeaths">loading</h1>
+                        <p id="newDeaths"></p>
                     </div>
                 </div>
             </div>   
@@ -66,7 +75,7 @@
                     <h1>Top Affected Countries</h1>
                 </div>
                 <div class="col-md-5"><p>Last Updated: May 22, 2020</p></div>
-                <div class="col-md 5"><p class="font-weight-bold">Italy</p></div>
+                <div class="col-md 5"><p class="font-weight-bold">USA</p></div>
             </div>
 
             <div class="row">
@@ -75,22 +84,22 @@
                     <ul class="list-unstyled px-3">
                         <li class="active-con row justify-content-between my-1">
                             <h6 class="font-weight-bold">USA</h6>
-                            <h6 class="text-primary font-weight-bold">6,450,430</h6>
+                            <h6 class="text-primary font-weight-bold" id="usa"></h6>
                         </li>
 
                         <li class="active-con row justify-content-between my-1">
-                            <h6 class="font-weight-bold">Italy</h6>
-                            <h6 class="text-primary font-weight-bold">6,450,430</h6>
-                        </li>
-
-                        <li class="active-con row justify-content-between my-1">
-                            <h6 class="font-weight-bold">Spain</h6>
-                            <h6 class="text-primary font-weight-bold">6,450,430</h6>
+                            <h6 class="font-weight-bold">India</h6>
+                            <h6 class="text-primary font-weight-bold" id="india"></h6>
                         </li>
 
                         <li class="active-con row justify-content-between my-1">
                             <h6 class="font-weight-bold">Brazil</h6>
-                            <h6 class="text-primary font-weight-bold">6,450,430</h6>
+                            <h6 class="text-primary font-weight-bold" id="brazil"></h6>
+                        </li>
+
+                        <li class="active-con row justify-content-between my-1">
+                            <h6 class="font-weight-bold">Russia</h6>
+                            <h6 class="text-primary font-weight-bold" id="russia"></h6>
                         </li>
                     </ul>
                 </div>
@@ -144,6 +153,31 @@
                 <p class="text-danger">Corona Virus Symptoms</p>
                 <h3 class="font-weight-bold">What are the symptoms?</h3>
                 <p class="text-muted">People may be sick with the virus from 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness and dry cough. Most people (about 80%) recover from the disease without needing special treatment.More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be mor vulnerable to becoming severely ill.</p>
+                
+                <div class="symptoms">
+                    <h6 class="font-weight-bold">Most common symptoms:</h6>
+                    <span class="text-success"><i class="fa fa-check-circle"></i> Dry cough</span>
+                    <span class="text-success"><i class="fa fa-check-circle"></i> Tiredness</span>
+                    <span class="text-success"><i class="fa fa-check-circle"></i> Fever</span>
+                </div>
+
+                <div class="symptoms">
+                    <h6 class="font-weight-bold">Less common symptoms:</h6>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Aches and Pains</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Sore Throat</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Diarrhoea</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Conjunctivitis</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Headache</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> Loss of taste or smell</span>
+                    <span class="text-primary"><i class="fa fa-check-circle"></i> A rash on skin or discolouration of fingers or toes</span>
+                </div>
+
+                <div class="symptoms">
+                    <h6 class="font-weight-bold">Serious symptoms:</h6>
+                    <span class="text-danger"><i class="fa fa-check-circle"></i> Difficulty breathing or shortness of breath</span>
+                    <span class="text-danger"><i class="fa fa-check-circle"></i> Chest pain or pressure</span>
+                    <span class="text-danger"><i class="fa fa-check-circle"></i> Loss of speech or movement</span>
+                </div>
             </div>
 
             <div class="col-md-5">
@@ -236,7 +270,7 @@
 
 
   
-    
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
