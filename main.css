@@ -132,14 +132,44 @@ img{
     margin-top: 5em!important;
 }
 
+.symp{
+    margin-top: 6em!important;
+}
+
+i{
+    font-size: 1.5em;
+}
+
 
  /*=============
    Media queries
    =============*/
    @media (max-width: 770px) {
     .protect {
-        color:red;
         margin: 0 auto !important;
+    }
+
+    .symp{
+        margin-top: 1em!important;
+    }
+
+    .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    small{
+        font-size: 1.1em!important;
+    }
+
+    p{
+        font-size: 1.2em!important;
+    }
+
+    .stats{
+        padding-top: 10em;
     }
 
     .protect-2{
@@ -163,6 +193,22 @@ img{
     img{
         max-width: 100%;
         height: auto;
+    }
+
+    .protect_yourself{
+        margin-top: 1em!important;
+    }
+
+    .symptoms {
+        font-size: 1.2em!important;
+    }
+
+    .footer{
+        padding: 0 1em;
+    }
+
+    .logo{
+        font-size: 2em!important;
     }
 
 }
