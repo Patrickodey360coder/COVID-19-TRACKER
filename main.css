@@ -8,16 +8,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
 body{
     font-family: 'Rubik', sans-serif;
     background-color: #E5E5E5 !important;
+}
+
+a:hover{
+    color: #184192;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 
 /* navigation */
 .nav-bar{
     background-color: var(--white);
+    z-index: 1;
+}
+
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo{
@@ -37,6 +55,8 @@ body{
     font-family: Rubik;
     font-style: normal;
     font-weight: normal;
+    background: #E5E5E5;
+    padding: 5px 10px;
 }
 
 .active{
@@ -108,3 +128,41 @@ body{
         padding: 10px 30px 10px 0px;
 }
 
+#symptoms{
+    margin-top: 5em!important;
+}
+
+
+ /*=============
+   Media queries
+   =============*/
+   @media (max-width: 770px) {
+    .protect {
+        color:red;
+        margin: 0 auto !important;
+    }
+
+    .protect-2{
+        padding-left: 1rem!important;
+        padding-right: 1rem!important;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .date{
+        text-align: center;
+        margin: auto;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+}

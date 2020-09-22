@@ -10,30 +10,32 @@
     <title>Covid Tracker</title>
 </head>
 <body>
-    <nav class="nav-bar py-4">
+    <nav class="nav-bar py-4 navbar-fixed">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 row align-items-center justify-content-start">
+            <div class="row justify-content-center justify-content-md-between justify-content-sm-between align-items-center">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12 row ">
                     <div class="col logo"><span><img src="images/Ellipse 10.png"></span> Cov19Strain</div>
                 </div>
-                <div class="col-md-6 col-sm-12 row align-items-center text-center">
-                        <div class="col-2 active">Home</div>
-                        <div class="col-2">Symptoms</div>
-                        <div class="col-2">Protection</div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12  row  text-center d-none d-md-block">
+                    <div class="row">
+                        <div class="col-4 active"><a href="#">Home</a></div>
+                        <div class="col-4"><a href="#symptoms">Symptoms</a></div>
+                        <div class="col-4"><a href="#protection">Protection</a></div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-12 row align-items-center justify-content-end text-center">
-                    <div class="date bg-muted">September 11 2019</div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-10 row text-center text-md-right py-3 py-md-0">
+                    <div class="date text-muted" id="date"></div>
                 </div>
             </div>
         </div>
     </nav>
 
     <section class="container mb-5">
-        <h3 class="py-5">Covid-19 Tracker</h3>
+        <h3 class="py-5 title">Covid-19 Tracker</h3>
 
         <div class="report py-4 px-3">
             <div class="row marows text-center">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="box bx-1">
                         <p class="font-weight-bold">Total Cases</p>
                         <h1 class="text-primary" id="totalCases">loading</h1>
@@ -41,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="box bx-2">
                         <p class="font-weight-bold">Active Cases</p>
                         <h1 class="text-warning" id="activeCases">loading</h1>
@@ -49,7 +51,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="box bx-3">
                         <p class="font-weight-bold">Recovered</p>
                         <h1 class="text-success" id="totalRecovered">loading</h1>
@@ -57,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="box bx-4">
                         <p class="font-weight-bold">Total Deaths</p>
                         <h1 class="text-danger" id="totalDeaths">loading</h1>
@@ -74,14 +76,15 @@
                 <div class="col-md-12">
                     <h1>Top Affected Countries</h1>
                 </div>
-                <div class="col-md-5"><p>Last Updated: May 22, 2020</p></div>
-                <div class="col-md 5"><p class="font-weight-bold">USA</p></div>
+                <div class="col-md-5"><p id="date2"></p></div>
+                <div class="col-md 5"><p class="font-weight-bold d-none d-sm-block">USA</p></div>
             </div>
 
-            <div class="row">
-                <div class="col-md-4 border rounded ml-3 p-2">
-                    <p>Countries</p>
-                    <ul class="list-unstyled px-3">
+            <div class="row justify-content-around">
+                <div class="col-lg-4 col-md-6 col-sm-11 p-2">
+                    <div class="border rounded p-2">
+                    <p class="d-md-center">Countries</p>
+                    <ul class="d-flex flex-column justify-content-between h-75 list-unstyled px-3">
                         <li class="active-con row justify-content-between my-1">
                             <h6 class="font-weight-bold">USA</h6>
                             <h6 class="text-primary font-weight-bold" id="usa"></h6>
@@ -102,57 +105,58 @@
                             <h6 class="text-primary font-weight-bold" id="russia"></h6>
                         </li>
                     </ul>
+                    </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
                     <div class="row justify-content-around">
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">Total Cases</small>
-                            <h6 class="text-primary">6,100,409</h6>
+                            <h6 class="text-primary" id="usaTotalCases"></h6>
                         </div>
 
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">Active Cases</small>
-                            <h6 class="text-warning">8,409,400</h6>
+                            <h6 class="text-warning" id="usaActiveCases"></h6>
                         </div>
 
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">Recovered</small>
-                            <h6 class="text-success">8,409,400</h6>
+                            <h6 class="text-success" id="usaRecovered"></h6>
                         </div>
 
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">Total Deaths</small>
-                            <h6 class="text-danger">8,409,400</h6>
+                            <h6 class="text-danger" id="usaTotalDeaths"></h6>
                         </div>
 
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">New Cases</small>
-                            <h6 class="text-primary">8,409,400</h6>
+                            <h6 class="text-primary" id="usaNewCases"></h6>
                         </div>
 
                         <div class="col-5 border rounded text-center mb-4 py-1">
                             <small class="text-muted">New Deaths</small>
-                            <h6 class="text-danger">8,409,400</h6>
+                            <h6 class="text-danger" id="usaNewDeaths"></h6>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-lg-3 col-sm-12 d-none d-lg-block">
                         <div class="map">
-                            <img src="./images/Rectangle 34.png" alt="map">
+                            <img class="img-fluid" src="./images/Rectangle 34.png" alt="map">
                         </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container mt-5">
-        <div class="row">
-            <div class="col-md-7 pr-5">
-                <p class="text-danger">Corona Virus Symptoms</p>
-                <h3 class="font-weight-bold">What are the symptoms?</h3>
-                <p class="text-muted">People may be sick with the virus from 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness and dry cough. Most people (about 80%) recover from the disease without needing special treatment.More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be mor vulnerable to becoming severely ill.</p>
+    <section id="symptoms" class="container mt-5 pt-5">
+        <div class="row mt-5 pt-5">
+            <div class="col-md-7 col-sm-12">
+                <p class="text-danger p-2">Corona Virus Symptoms</p>
+                <h3 class="font-weight-bold p-2">What are the symptoms?</h3>
+                <p class="text-muted p-2">People may be sick with the virus from 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness and dry cough. Most people (about 80%) recover from the disease without needing special treatment.More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be mor vulnerable to becoming severely ill.</p>
                 
                 <div class="symptoms">
                     <h6 class="font-weight-bold">Most common symptoms:</h6>
@@ -180,41 +184,41 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-5 d-none d-md-block">
                 <div class="row justify-content-center">
-                    <img src="./images/doctor-woman 1.png" alt="woman doctor">
+                    <img class="img-fluid" src="./images/doctor-woman 1.png" alt="woman doctor">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container protect_yourself">
+    <section id="protection" class="container protect_yourself mt-5 py-5">
         <div class="bg-white mt-5">
-            <div class="row py-5 px-3">
-                <div class="col-md-6">
-                    <img src="/images/mask-man 1.png" alt="mask-man">
+            <div class="row py-5 col-sm-12 protect">
+                <div class="col-md-6 col-sm-12 d-none d-md-block">
+                    <img class="img-fluid" src="/images/mask-man 1.png" alt="mask-man">
                 </div>
-                <div class="col-md-6 px-5">
+                <div class="protect-2 col-md-6 col-sm-12 px-3">
                     <h3  class="font-weight-bold">How can I protect myself from COVID-19?</h3>
                     <p class="text-muted mt-4">Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze. It also spreads when a person touches a surface or object that has the virus on it, the touches their eyes, nose or mouth.</p>
 
                     <h6 class="my-5 font-weight-bold">What should <span class="text-success">I do?</span></h6>
                     <div class="row justify-content-around text-center">
-                        <div class="col-md-3 border rounded pt-3 px-1">
+                        <div class="col-md-3 border rounded pt-3 px-1 my-1">
                             <div class="circle">
                                 <img src="/images/Ellipse 12.png" alt="wear a face mask">
                             </div>
                             <small>Wear a face mask</small>
                         </div>
 
-                        <div class="col-md-3 border rounded pt-3 px-1">
+                        <div class="col-md-3 border rounded pt-3 px-1 my-1">
                             <div class="circle">
                                 <img src="/images/Ellipse 13.png" alt="don't touch your face">
                             </div>
                             <small>Don't touch your face</small>
                         </div>
 
-                        <div class="col-md-3 border rounded pt-3 px-1">
+                        <div class="col-md-3 border rounded pt-3 px-1 my-1">
                             <div class="circle">
                                 <img src="/images/Ellipse 14.png" alt="avoid hand contact">
                             </div>
@@ -223,14 +227,14 @@
                     </div>
 
                     <div class="row mt-4 justify-content-around text-center">
-                        <div class="col-md-3 border rounded pt-3 px-1">
+                        <div class="col-md-3 border rounded pt-3 px-1 my-1">
                             <div class="circle">
                                 <img src="/images/Ellipse 15.png" alt="keep safe distance">
                             </div>
                             <small >Keep safe distance</small>
                         </div>
 
-                        <div class="col-md-3 border rounded pt-3 px-1">
+                        <div class="col-md-3 border rounded pt-3 px-1 my-1">
                             <div class="circle">
                                 <img src="/images/Ellipse 16.png" alt="stay at home">
                             </div>
