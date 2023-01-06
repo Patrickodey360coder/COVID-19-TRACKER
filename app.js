@@ -1,6 +1,6 @@
 
 //Update data function total statistics
-    let totalCases       = document.getElementById("totalCases")
+    let totalCases       = document.getElementById("totalCases");
     let activeCases      = document.getElementById("activeCases")
     let totalRecovered   = document.getElementById("totalRecovered")
     let totalDeaths      = document.getElementById("totalDeaths")
