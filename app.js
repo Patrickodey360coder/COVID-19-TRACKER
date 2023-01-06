@@ -3,7 +3,7 @@
     let totalCases       = document.getElementById("totalCases");
     let activeCases      = document.getElementById("activeCases");
     let totalRecovered   = document.getElementById("totalRecovered");
-    let totalDeaths      = document.getElementById("totalDeaths")
+    let totalDeaths      = document.getElementById("totalDeaths");
 
 //New confirmed
     let newConfirmed = document.getElementById("newConfirmed")
