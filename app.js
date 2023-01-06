@@ -6,7 +6,7 @@
     let totalDeaths      = document.getElementById("totalDeaths");
 
 //New confirmed
-    let newConfirmed = document.getElementById("newConfirmed")
+    let newConfirmed = document.getElementById("newConfirmed");
     let newCases     = document.getElementById("newCases")
     let newRecovered = document.getElementById("newRecovered")
     let newDeaths    = document.getElementById("newDeaths")
